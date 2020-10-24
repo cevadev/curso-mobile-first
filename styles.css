@@ -1,0 +1,142 @@
+/*root-> es el lugar donde implementamos nuestras variables*/
+:root {
+  --font-inter: "Inter", sans-serif;
+  --size-300: 300;
+  --size-400: 400;
+  --size-500: 500;
+  --size-700: 700;
+  --background: #e5e5e5;
+  --linear-gradient: 207.8deg, #201e1c 16.69%, #f7931a 100%;
+
+  /*variables de colores*/
+  --bitcoin-orange: #f7931a;
+  --soft-orange: #ffe9d5;
+  --secondary-blue: #ffe9d5;
+  --soft-blue: #e7f5ff;
+  --warm-black: #201e1c;
+  --warm-blackplus1: #282623;
+  --gray: #bababa;
+  --off-white: #faf8f7;
+  --just-white: #ffffff;
+}
+
+/*quitamos los estilo que trae por defecto el navegador*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "DM Sans", sans-serif;
+}
+
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  /*el header no va ser mas chico a 320px ya que 320px es la dimension mas chica de un celular*/
+  min-width: 320px;
+  height: 334px;
+  text-align: center;
+
+  /*Uso de linear-gradient*/
+  background: linear-gradient(
+    207.8deg,
+    var(--warm-black) 16.69%,
+    var(--bitcoin-orange) 100%
+  );
+
+  /* background: linear-gradient(
+    90deg,
+    rgba(108, 58, 92, 1) 20%,
+    rgba(58, 108, 58, 1) 20%,
+    rgba(58, 108, 58, 1) 40%,
+    rgba(108, 58, 92, 1) 40%,
+    rgba(108, 58, 92, 1) 60%,
+    rgba(58, 108, 58, 1) 60%,
+    rgba(58, 108, 58, 1) 80%,
+    rgba(108, 58, 92, 1) 80%
+  ); */
+}
+
+header img {
+  width: 150px;
+  height: 24px;
+  margin-top: 60px;
+  /*centramos un elemento que posee como conteneder display flex*/
+  align-self: center;
+}
+
+.header--title-container {
+  width: 90%;
+  min-width: 288px;
+  /*una vez que lleguemos a los 900px deja de crecer*/
+  max-width: 900px;
+  height: 218px;
+  margin-top: 30px;
+  text-align: center;
+  /*alineamos a todo el div al centro*/
+  align-self: center;
+}
+
+.header--title-container h1 {
+  font-size: 2.4rem; /*equivale 24px*/
+  font-weight: bold;
+  line-height: 2.6rem; /*dimension entrelinea*/
+  color: var(--just-white);
+}
+
+.header--title-container p {
+  margin-top: 24px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  font-style: normal;
+  color: var(--soft-orange);
+}
+
+/*Posicion para el boton flotante en el header*/
+.header--title-container .header-button {
+  /*tomamos como position relative a su padre, en este caso el header y asi podemos reposicionar el elemento en cualquier
+    parte del header a pesar de que existan mas elementos*/
+  position: absolute;
+  /*posicionamos el boton*/
+  left: calc(50% - 114.5px);
+
+  /*cuando estamos en position: absolute nos permtite mover el elemento y podemos usar top, left, right, bottom*/
+  top: 270px;
+  display: block;
+  margin-top: 35px;
+
+  /*diseño del boton*/
+  padding: 15px;
+  width: 229px;
+  height: 48px;
+  background-color: var(--off-white);
+
+  /*sombra para el boton*/
+  box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+
+  border: none;
+  border-radius: 5px;
+
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--warm-black);
+}
+/*fin posiion boton flotante en el header*/
+
+/*Icono en el boton*/
+.header-button span {
+  /*le asignamos un display a la imagen por defecto es inline*/
+  display: inline-block;
+  width: 13px;
+  height: 8px;
+  margin-left: 10px;
+  background-image: url(./assets/icons/down-arrow.svg);
+}
