@@ -11,13 +11,13 @@
   /*variables de colores*/
   --bitcoin-orange: #f7931a;
   --soft-orange: #ffe9d5;
-  --secondary-blue: #ffe9d5;
+  --secondary-blue: #1a9af7;
   --soft-blue: #e7f5ff;
-  --warm-black: #201e1c;
-  --warm-blackplus1: #282623;
-  --gray: #bababa;
+  --warm-black: #282623;
+  --black: #201e1c;
   --off-white: #faf8f7;
-  --just-white: #ffffff;
+  --just-white: #fff;
+  --grey: #bababa;
 }
 
 /*quitamos los estilo que trae por defecto el navegador*/
@@ -211,6 +211,14 @@ main {
   color: var(--bitcoin-orange);
 }
 
+.main-commissions-table .commissions-table--title {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.3rem;
+  color: var(--secondary-blue);
+}
+
 /*estilos para el contenedor de la tabla de monedas con sus valores*/
 .main-currency-table .currency-table--container .commissions-table--container {
   width: 90%;
@@ -315,4 +323,50 @@ main {
   margin: 7px;
   font-size: 1.2rem;
   line-height: 1.5px;
+  font-weight: 300;
+  color: var(--warm-black);
+}
+
+/*seccion de beneficios*/
+.main-product-detail {
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  height: auto;
+  padding: 20px 10px;
+  background-color: var(--warm-black);
+}
+
+.product-detail--batata-logo {
+  position: absolute; /*busca al primer elemento padre que tenga position relative que es -main-product-detail*/
+  width: 40.57px;
+  height: 24.01px;
+  /*posicionamos la imagen flotante*/
+  top: -10px;
+  left: calc(50% - 20px);
+  /*fin del posicionamiento*/
+  background-image: url("./assets/icons/batata.svg");
+}
+
+.product-detail--title {
+  width: 90%;
+  min-width: 288px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+}
+.product-detail--title h2 {
+  margin-bottom: 20px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--just-white);
+}
+.product-detail--title p {
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #808080;
 }
