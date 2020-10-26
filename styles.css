@@ -140,3 +140,179 @@ header img {
   margin-left: 10px;
   background-image: url(./assets/icons/down-arrow.svg);
 }
+
+main {
+  width: 100%;
+  height: auto; /*el propio contenido define la altura de main*/
+  background-color: var(--off-white);
+}
+
+.main-exchange-container {
+  width: 100%;
+  height: auto;
+  padding-top: 80px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.main-exchange-container--title {
+  width: 90%;
+  min-width: 288px; /*podrá reducirse hasta 288px*/
+  max-width: 900px; /*podrá crecer hasta 900px*/
+  margin: 0 auto;
+}
+
+.main-exchange-container .backgroundImg {
+  /*tenemos una etiqueta contenedora div, pero debemos darle dimensiones al div para que luego podemos incluir la imgen de background*/
+  width: 200px;
+  height: 200px;
+  margin: 0 auto; /*hacemos que el div se posicione en el centro*/
+  margin-bottom: 50px;
+  background-image: url(./assets/img/Bitcoin.svg);
+  background-size: cover; /*la imagen no se repite*/
+  background-position: center; /*sin importar el tamaño del container la imagen debe estar centrada*/
+  background-repeat: no-repeat; /*evitamos que la imagen se repita si es mas pequeña que el container*/
+}
+
+.main-exchange-container h2 {
+  margin-bottom: 30px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--warm-black);
+}
+
+.main-exchange-container p {
+  margin-bottom: 30px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.6rem;
+  color: #757575;
+}
+
+/*contenedor principal de la tabla de monedas*/
+.main-currency-table .main-commissions-table {
+  width: 70%;
+  min-width: 235px;
+  max-width: 500px;
+  height: 360px;
+  /*no le agregamos margin de arriba y abajo pero de lado izq y derecho el margn se calcula para estar en el centro*/
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+}
+
+/*modificamos el titulo de la tabla*/
+.main-currency-table .currency-table--title {
+  /*separamos el titulo de la tabla*/
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.3rem;
+  color: var(--bitcoin-orange);
+}
+
+/*estilos para el contenedor de la tabla de monedas con sus valores*/
+.main-currency-table .currency-table--container .commissions-table--container {
+  width: 90%;
+  min-width: 230px;
+  max-width: 300px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+/*estilos para la tabla de monedas*/
+.main-currency-table .currency-table--container table,
+.commissions-table--container table {
+  width: 100%;
+  height: 100%;
+}
+
+.currency-table--container td,
+.commissions-table--container td {
+  width: 50%;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.9rem;
+  color: var(--gray);
+  background-color: var(--just-white);
+}
+
+/*para redondear las esquinas de una tabla usamos las clases table__top-left, top-right, bottom-left, bottom-right*/
+.currency-table--container .table__top-left,
+.commissions-table--container .table__top-left {
+  border-radius: 15px 0 0 0;
+}
+
+.currency-table--container .table__top-right,
+.commissions-table--container .table__top-right {
+  border-radius: 0 15px 0 0;
+}
+
+.currency-table--container .table__bottom-left,
+.commissions-table--container .table__bottom-left {
+  border-radius: 0 0 0 15px;
+}
+
+.currency-table--container .table__bottom-right,
+.commissions-table--container .table__bottom-right {
+  border-radius: 0 0 15px 0;
+}
+
+/*la clase .table.right nos permite dar esrtilos a la columna derecha de la tabla*/
+.currency-table--container .table__right,
+.commissions-table--container .table__right {
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 1.7rem;
+  color: #757575;
+}
+
+/*asignamos el icono de up or down al lado de las monedas*/
+.currency-table--container .down {
+  display: inline-block;
+  /*le damos dimension para que pueda ser visto en el layout*/
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  background-image: url("./assets/icons/trending-down.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.currency-table--container .up {
+  display: inline-block;
+  /*le damos dimension para que pueda ser visto en el layout*/
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  background-image: url("./assets/icons/trending-up.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.currency-table--date {
+  width: 190px;
+  height: 31px;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 8px;
+  background-color: var(--soft-orange);
+  border-radius: 8px;
+}
+.commissions-table--date {
+  width: 190px;
+  height: 31px;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 8px;
+  background-color: var(--soft-blue);
+  border-radius: 8px;
+}
+.currency-table--date p,
+.commissions-table--date p {
+  margin: 7px;
+  font-size: 1.2rem;
+  line-height: 1.5px;
+}
